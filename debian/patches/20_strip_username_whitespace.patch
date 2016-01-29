@@ -1,0 +1,24 @@
+Author: Kevin Peng <kpengboy@ocf.berkeley.edu>
+
+Remove leading and trailing whitespace in username box before authentication
+
+Users sometimes press the spacebar to wake up the monitor. This inserts a
+difficult-to-see space into the username box, which causes authentication to
+fail later. By stripping away such spaces, users won't have so much trouble.
+--- a/src/lightdm-gtk-greeter.c
++++ b/src/lightdm-gtk-greeter.c
+@@ -1148,8 +1148,12 @@
+ gboolean
+ username_focus_out_cb (GtkWidget *widget, GdkEvent *event, gpointer user_data)
+ {
+-    if (!g_strcmp0(gtk_entry_get_text(username_entry), "") == 0)
+-        start_authentication(gtk_entry_get_text(username_entry));
++    gchar *username = g_strdup(gtk_entry_get_text(username_entry));
++
++    g_strstrip(username);
++    if (!g_strcmp0(username, "") == 0)
++        start_authentication(username);
++    g_free(username);
+     return FALSE;
+ }
+ 
