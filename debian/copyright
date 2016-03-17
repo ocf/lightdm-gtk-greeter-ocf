@@ -6,6 +6,10 @@ Files: debian/*
 Copyright: © 2010 Yves-Alexis Perez <corsac@debian.org>
 License: GPL-2
 
+Files: debian/patches/20_strip_username_whitespace.patch
+Copyright: © 2016 Kevin Peng <kpengboy@ocf.berkeley.edu>
+License: GPL-3+
+
 Files: ./greeters/gtk/lightdm-gtk-greeter.c
  ./src/configuration.c
  ./src/configuration.h

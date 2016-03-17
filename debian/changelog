@@ -1,9 +1,9 @@
-lightdm-gtk-greeter (1.8.5-2ocf1) jessie; urgency=medium
+lightdm-gtk-greeter-ocf (1.8.5-2ocf1) jessie; urgency=medium
 
   * Remove leading and trailing whitespace in username box before
     authentication
 
- -- Kevin Peng <kevin@kevin-laptop>  Thu, 28 Jan 2016 23:09:18 -0800
+ -- Kevin Peng <kevin@ocf.berkeley.edu>  Thu, 28 Jan 2016 23:09:18 -0800
 
 lightdm-gtk-greeter (1.8.5-2) unstable; urgency=medium
 

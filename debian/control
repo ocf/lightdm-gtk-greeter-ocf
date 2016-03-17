@@ -1,21 +1,19 @@
-Source: lightdm-gtk-greeter
+Source: lightdm-gtk-greeter-ocf
 Section: x11
 Priority: optional
-Maintainer: Debian Xfce Maintainers <pkg-xfce-devel@lists.alioth.debian.org>
-Uploaders: Evgeni Golov <evgeni@debian.org>, 
- Yves-Alexis Perez <corsac@debian.org>, Emanuele Rocca <ema@debian.org>, 
- Simon Huggins <huggie@earth.li>          
+Maintainer: Kevin Peng <kpengboy@ocf.berkeley.edu>
+XSBC-Original-Maintainer: Debian Xfce Maintainers <pkg-xfce-devel@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 9), pkg-config, libgtk-3-dev, 
   liblightdm-gobject-dev (>= 1.3.5), intltool, autotools-dev
 Standards-Version: 3.9.5
 Homepage: https://launchpad.net/lightdm-gtk-greeter
-Vcs-Svn: svn://anonscm.debian.org/pkg-xfce/goodies/trunk/lightdm-gtk-greeter
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-xfce/goodies/trunk/lightdm-gtk-greeter
+Vcs-Git: https://github.com/ocf/lightdm-gtk-greeter-ocf.git
+Vcs-Browser: https://github.com/ocf/lightdm-gtk-greeter-ocf
 
-Package: lightdm-gtk-greeter
-Provides: lightdm-greeter
-Replaces: lightdm-gtk, lightdm (<< 0.9.2-1)
-Breaks: lightdm-gtk, lightdm (<< 0.9.2-1)
+Package: lightdm-gtk-greeter-ocf
+Provides: lightdm-greeter, lightdm-gtk-greeter
+Replaces: lightdm-gtk, lightdm (<< 0.9.2-1), lightdm-gtk-greeter
+Breaks: lightdm-gtk, lightdm (<< 0.9.2-1), lightdm-gtk-greeter
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: desktop-base, gnome-themes-standard, gnome-icon-theme-symbolic, policykit-1
